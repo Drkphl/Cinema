@@ -3,17 +3,17 @@ import db from '../config/db.js';
 const filmeSchema = new db.Schema({
     nome: {
         type: String,
-        require: true,
+        required: true,
     },
     ano: {
-        type: Date,
+        type: db.Schema.Types.Date,
         required: true,
     },
     genero: {
         type: String,
-        enum: ['TERROR', 'ROMANCE', 'COMEDIA'],
+        enum: ['TERROR', 'ROMANCE', 'COMÉDIA'],
         required: true,
-        default: 'COMEDIA',
+        default: 'COMÉDIA',
     },
 });
 
